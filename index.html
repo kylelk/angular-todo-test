@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TODO test</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="todo.js"></script>
+</head>
+<body ng-app="myApp">
+    <div id="content_container">
+        <div ng-controller="todoController">
+            <ul class="unstyled">
+                <li ng-repeat="todo in todoList">
+                    <todo-item todo-data="todo"></todo-item>
+                </li>
+            </ul>
+            <form ng-submit="addTodo()">
+                <input type="text" ng-model="newTodoText"  size="30" placeholder="add new todo here">
+                <input class="btn-primary" type="submit" value="add">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

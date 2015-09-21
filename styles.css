@@ -1,0 +1,35 @@
+html, body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, Sans-Serif;
+    padding: 0;
+    margin: 0;
+    background-color: #eee;
+}
+
+#content_container {
+    padding: 10px;
+}
+
+todo-item {
+    background-color: #fff;
+    display: block;
+    margin: 6px;
+    padding: 2px;
+    box-shadow: 0 0 1px #000;
+}
+
+todo-item .todo_heading {
+
+}
+
+todo-item .todo_heading * {
+    vertical-align: middle;
+}
+
+todo-item [data-completed=true] .todo_title {
+    text-decoration: line-through;
+}
+
+todo-item [data-completed=true] .todo_icon_check {
+    stroke: #00C853;
+}
