@@ -33,3 +33,7 @@ todo-item [data-completed=true] .todo_title {
 todo-item [data-completed=true] .todo_icon_check {
     stroke: #00C853;
 }
+
+todo-item .todo_date {
+    font-size: 12px;
+}

@@ -13,14 +13,15 @@
     <div id="content_container">
         <div ng-controller="todoController">
             <ul class="unstyled">
-                <li ng-repeat="todo in todoList">
+                <li ng-repeat="todo in todoList track by $index">
                     <todo-item todo-data="todo"></todo-item>
                 </li>
             </ul>
             <form ng-submit="addTodo()">
-                <input type="text" ng-model="newTodoText"  size="30" placeholder="add new todo here">
+                <input type="text" ng-model="newTodoText"  size="30" placeholder="add new todo here" required="required">
                 <input class="btn-primary" type="submit" value="add">
             </form>
+            <button ng-click="saveTodoItems()">Save</button>
         </div>
     </div>
 </body>
